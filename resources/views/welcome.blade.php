@@ -4,97 +4,87 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name') }}</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
+                background-color: #151515;
+                color: #fffaf0;
+                font-family: 'Noto Serif', 'Noto Serif JP', sans-serif;
+                min-height: 100vh;
                 margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
             }
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
+            main {
                 text-align: center;
             }
 
-            .title {
+            #title {
+                margin: 0 0 25px;
+            }
+            #title > #stars {
+                font-size: 25px;
+            }
+            #title > h1 {
                 font-size: 84px;
+                font-weight: normal;
+                margin: 0;
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
+                color: aliceblue;
+                margin: 0 25px;
+                font-size: 17px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
+                transition: all .5s;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
+            footer {
+                margin-top: 60px;
+                font-size: 14px;
+            }
+            footer > #phrase {
+                color: #636b6f;
             }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+        <main>
+            <div id="title">
+                <div id="stars">
+                    <span style="color: #cbc6cc;">&#x2726</span>
+                    <span style="color: #fe9952;">&#x2726</span>
+                    <span style="color: #61bf99;">&#x2726</span>
+                    <span style="color: #6292e9;">&#x2726</span>
+                    <span style="color: #fb5458;">&#x2726</span>
+                    <span style="color: #95caee;">&#x2726</span>
+                    <span style="color: #fdd162;">&#x2726</span>
+                    <span style="color: #8c67aa;">&#x2726</span>
+                    <span style="color: #e08696;">&#x2726</span>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <h1>{{ config('app.name') }}</h1>
             </div>
-        </div>
+
+            <div class="links">
+                <a href="{{ url('/') }}">舞台少女一覧</a>
+                <a href="{{ url('/') }}">学校一覧</a>
+                <a href="{{ url('/') }}">統合検索</a>
+                <a href="{{ url('/') }}">GitHub</a>
+            </div>
+
+            <footer>
+                {{ $_SERVER['HTTP_HOST'] }}
+                <span id="phrase"></span>
+            </footer>
+        </main>
     </body>
 </html>

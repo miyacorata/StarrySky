@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #151515;
+    color: #fffaf0;
+    overflow-y: scroll;
+    min-height: 100vh;
+    min-width: 1300px;
+    position: relative;
+}
+header{
+    background: #333;
+    padding: 3px 10px;
+    display: flex;
+    font-family: 'Noto Serif', serif;
+}
+header > h1, header > h1 > a{
+    color: floralwhite;
+    font-size: 20px;
+    margin: 0;
+    text-decoration: none;
+}
+
+main, div[data-pagetype=fullwidth]{
+    width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 1300px;
+    margin: 0 auto;
+    padding: 20px 0 10px;
+    font-family: 'Noto Serif', 'Noto Serif JP', sans-serif;
+    font-size: 15px;
+    min-height: 100px;
+}
+footer #footer-data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+footer #footer-links > a{
+    color: #cbc6cc;
+    margin: 0 5px;
+    margin-bottom: 130px;
+}
+footer > blockquote{
+    text-align: center;
+    font-style: italic;
+    color: darkgray;
+    margin: 10px 0 0;
+}

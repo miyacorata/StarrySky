@@ -1,0 +1,27 @@
+{
+    "Star": "スタァ",
+    "Name": "名前",
+    "Name y": "なまえ",
+    "Name r": "Alphabet",
+    "Name separate": "名:分割",
+    "Name y separate": "な:分割",
+    "Name r separate": "Na:分割",
+    "Name r separate secondary": "中:分割",
+    "Birthday": "誕生日",
+    "Cv": "キャスト",
+    "School": "学校名",
+    "Department": "学科",
+    "Grade": "学年",
+    "Class no": "出席番号",
+    "Act like": "好きなこと",
+    "Act not good": "苦手なこと",
+    "Food like": "好きな食べ物",
+    "Food dislike": "嫌いな食べ物",
+    "Weapon name": "武器名",
+    "Weapon category": "武器カテゴリ",
+    "Document": "ドキュメント",
+    "Color": "色",
+
+    "Created at": "登録日時",
+    "Updated at": "更新日時"
+}

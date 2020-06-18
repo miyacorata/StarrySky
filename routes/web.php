@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'InfoController@home');
+
+Route::resource('/star', 'StarController');

@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
+    <!-- JS -->
+    <script defer src="{{ asset('js/starrysky.js') }}"></script>
+
     <!-- Include -->
     @yield('head')
 

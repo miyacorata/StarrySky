@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Star;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class StarController extends Controller
@@ -10,7 +12,12 @@ class StarController extends Controller
         return view('star.show');
     }
 
-    public function show(Request $request){
-        //
+    public function show($name_r){
+        try{
+            $star = Star::where('name_r','like',$name_r)->firstOrFail();
+        }catch (ModelNotFoundException $e){
+            abort(404);
+        }
+        return view('star.show',compact('star'));
     }
 }

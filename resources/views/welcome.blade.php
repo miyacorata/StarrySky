@@ -54,6 +54,7 @@
             }
             footer > #phrase {
                 color: #636b6f;
+                font-style: italic;
             }
         </style>
     </head>
@@ -75,7 +76,7 @@
             </div>
 
             <div class="links">
-                <a href="{{ url('/') }}">舞台少女一覧</a>
+                <a href="{{ url('/star') }}">舞台少女一覧</a>
                 <a href="{{ url('/') }}">学校一覧</a>
                 <a href="{{ url('/') }}">統合検索</a>
                 <a href="{{ url('/') }}">GitHub</a>
@@ -83,7 +84,7 @@
 
             <footer>
                 {{ $_SERVER['HTTP_HOST'] }}
-                <span id="phrase"></span>
+                <p id="phrase">And it shall be bestowed upon you, the Star which you have longed for─</p>
             </footer>
         </main>
     </body>

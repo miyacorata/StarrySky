@@ -1,11 +1,12 @@
-@extends('layout.app')
+@extends('layout.app', ['title' => $star->name])
 
 <?php
     /**
      * @var $star App\Star
      */
 
-    $color = strlen($star->color) === 7 ? $star->color : '#151515'
+    $color = strlen($star->color) === 7 ? $star->color : '#151515';
+    $back_name_array = explode(' ',ucwords(separateString($star->name_r, $star->name_r_separate)), 2);
 ?>
 
 @section('head')
@@ -27,8 +28,9 @@
 
 @section('content')
     <img src="{{ asset('image/tachie/'.$star->name_r.'.png') }}" alt="{{ $star->name }}" id="tachie">
-    <div class="plain-box" id="info-box">
-        <section id="profile">
+    <div id="back-name">{{ $back_name_array[0] }}<br>{{ $back_name_array[1] }}</div>
+    <div id="info-box">
+        <section id="profile" class="plain-box">
             <h1 style="border-bottom-color: {{ $color }}">
                 <img src="{{ asset('image/badge/seisho.png') }}" alt="seisho">
                 {{ $star->name }}<span>{{ ucwords(separateString($star->name_r,$star->name_r_separate)) }}</span>
@@ -43,7 +45,7 @@
             <table id="profile-table" class="table">
                 <tr>
                     <th>キャスト</th><td>{{ $star->cv }}</td>
-                    <th>誕生日</th><td>{{ $star->birthday }}</td>
+                    <th>誕生日</th><td>{{ convertDateString($star->birthday) }}</td>
                 </tr>
                 <tr>
                     <th>好きなこと</th><td>{{ $star->act_like }}</td>
@@ -59,9 +61,14 @@
                 </tr>
             </table>
         </section>
-        <section>
-            <h2>Document</h2>
-            <div>{{ $star->document }}</div>
+        <section id="" class="plain-box">
+            <div>{!! $document ?: 'ドキュメントが登録されていません' !!}</div>
+            <hr>
+            <p style="font-size: 13px">
+                このセクションは管理人が収集した情報によるものです。<br>
+                公式の情報ではない推察や、誤った情報、古い情報が含まれる場合があることにご注意ください。
+            </p>
+            <div style="text-align: right">最終更新 : {{ date('r', strtotime($star->updated_at)) }}</div>
         </section>
     </div>
 @endsection

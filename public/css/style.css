@@ -9,7 +9,7 @@ body{
     position: relative;
 }
 header{
-    background: #333;
+    background: linear-gradient(rgba(28, 37, 41, 0.3), transparent);
     padding: 3px 10px;
     display: flex;
     font-family: 'Noto Serif', serif;
@@ -118,4 +118,13 @@ table.table td::after{
     border-radius: 5px;
     box-shadow: 0 0 5px gray;
     color: black;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling */
+hr{
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg ,rgba(0,0,0,0), rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.4) 80%, rgba(0,0,0,0));
 }

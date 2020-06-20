@@ -12,7 +12,6 @@ img#tachie{
     position: relative;
     margin: 50px 0 0 470px;
     z-index: 10;
-    padding: 10px 20px;
 }
 
 #profile > h1{
@@ -35,6 +34,18 @@ img#tachie{
     padding-bottom: 5px;
 }
 
+#back-name{
+    position: fixed;
+    top: 200px;
+    left: calc(50vw - 760px);
+    font-size: 300px;
+    font-family: 'Noto Serif', serif;
+    color: rgba(0,0,0,0.2);
+    line-height: 0.9em;
+    z-index: 1;
+    user-select: none;
+}
+
 #student-info{
     font-size: 15px;
     margin-top: 0;
@@ -42,3 +53,10 @@ img#tachie{
     justify-content: space-between;
 }
 
+footer > blockquote{
+    color: rgba(255,255,255,0.5);
+}
+
+.description{
+    white-space: pre-line;
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Star;
+use cebe\markdown\GithubMarkdown;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
@@ -18,6 +19,8 @@ class StarController extends Controller
         }catch (ModelNotFoundException $e){
             abort(404);
         }
-        return view('star.show',compact('star'));
+        $parser = new GithubMarkdown();
+        $document = $parser->parse($star->document);
+        return view('star.show',compact('star','document'));
     }
 }

@@ -30,10 +30,10 @@ class StarController extends AdminController
         $grid->column('name', __('Name'));
         $grid->column('name_y', __('Name y'));
         $grid->column('name_r', __('Name r'));
-        $grid->column('name_separate', __('Name separate'));
-        $grid->column('name_y_separate', __('Name y separate'));
-        $grid->column('name_r_separate', __('Name r separate'));
-        $grid->column('name_r_separate_secondary', __('Name r separate secondary'));
+        // $grid->column('name_separate', __('Name separate'));
+        // $grid->column('name_y_separate', __('Name y separate'));
+        // $grid->column('name_r_separate', __('Name r separate'));
+        // $grid->column('name_r_separate_secondary', __('Name r separate secondary'));
         $grid->column('birthday', __('Birthday'));
         $grid->column('cv', __('Cv'));
         $grid->column('school', __('School'));
@@ -48,8 +48,10 @@ class StarController extends AdminController
         $grid->column('weapon_category', __('Weapon category'));
         // $grid->column('document', __('Document'));
         $grid->column('color', __('Color'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        // $grid->column('created_at', __('Created at'))
+        //     ->display(function ($date){ return date('c', strtotime($date)); });
+        $grid->column('updated_at', __('Updated at'))
+            ->display(function ($date){ return date('c', strtotime($date)); });
 
         return $grid;
     }

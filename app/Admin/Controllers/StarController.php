@@ -127,7 +127,7 @@ class StarController extends AdminController
             $form->text('weapon_name', __('Weapon name'));
             $form->text('weapon_category', __('Weapon category'));
             $form->textarea('document', __('Document'))->help('Markdownで入力してください');
-            $form->color('color', __('Color'))->help('"#"込みで入力してください');
+            $form->text('color', __('Color'))->help('"#"込みで入力してください');
         });
 
 

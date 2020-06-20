@@ -20,6 +20,7 @@ class StarController extends Controller
             abort(404);
         }
         $parser = new GithubMarkdown();
+        $parser->enableNewlines = true;
         $document = $parser->parse($star->document);
         return view('star.show',compact('star','document'));
     }

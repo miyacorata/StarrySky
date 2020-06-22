@@ -24,6 +24,10 @@
 
 <header>
     <h1><a href="{{ url('/') }}">{{ config('app.name') }}</a></h1>
+    <nav>
+        <a href="{{ url('/') }}">トップ</a>
+        <a href="{{ url('/star') }}">舞台少女一覧</a>
+    </nav>
 </header>
 
 {!! !empty($fullwidth) && $fullwidth ? '<div data-pagetype="fullwidth">' : '<main>' !!}

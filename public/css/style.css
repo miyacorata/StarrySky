@@ -9,16 +9,27 @@ body{
     position: relative;
 }
 header{
-    background: linear-gradient(rgba(28, 37, 41, 0.3), transparent);
+    background: linear-gradient(rgba(28, 37, 41, 0.2), transparent);
     padding: 3px 10px;
     display: flex;
+    align-content: flex-end;
     font-family: 'Noto Serif', serif;
+    margin-bottom: 10px;
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
 header > h1, header > h1 > a{
     color: floralwhite;
     font-size: 20px;
     margin: 0;
     text-decoration: none;
+}
+header > nav{
+    margin-left: 10px;
+    padding: 3px 0 0;
+}
+header > nav > a{
+    margin: 0 5px;
+    color: white;
 }
 
 main, div[data-pagetype=fullwidth]{

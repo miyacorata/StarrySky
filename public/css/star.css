@@ -70,3 +70,7 @@ footer #footer-links > a{
     color: whitesmoke;
 }
 
+/* 特殊処理 */
+img#tachie[data-star="nanadaiba"]{
+    left: calc(50vw - 730px);
+}

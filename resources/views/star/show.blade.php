@@ -27,7 +27,8 @@
 @endsection
 
 @section('content')
-    <img src="{{ asset('image/tachie/'.$star->name_r.'.png') }}" alt="{{ $star->name }}" id="tachie">
+    <img src="{{ asset('image/tachie/'.$star->name_r.'.png') }}" alt="{{ $star->name }}"
+         id="tachie" data-star="{{ $star->name_r }}">
     <div id="back-name">{{ $back_name_array[0] }}<br>{{ $back_name_array[1] }}</div>
     <div id="info-box">
         <section id="profile" class="plain-box">

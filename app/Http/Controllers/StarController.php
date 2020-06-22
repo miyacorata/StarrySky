@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 class StarController extends Controller
 {
     public function index(Request $request){
-        return view('star.show');
+        $stars = Star::all();
+        return view('star.index',compact('stars'));
     }
 
     public function show($name_r){

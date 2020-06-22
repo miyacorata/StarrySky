@@ -39,12 +39,15 @@
                 <div>{{ $star->school.' '.$star->department }}
                     {{ $star->grade >= 4 ? $star->grade.'期' : $star->grade.'年' }}
                     {{ !empty($star->class_no) ? '出席番号'.$star->class_no.'番': '' }}</div>
-                <div style="color: {{ $color }}; font-weight: bold;cursor: default" id="color-code">{{ $star->color ?: 'N/A' }}</div>
+                <div style="color: {{ $color }}; font-weight: bold;cursor: default" id="color-code"
+                     title="公式サイトのデザインに基づくものです&#x0Aクリックしてクリップボードにコピー">{{ $star->color ?: 'N/A' }}</div>
             </div>
             <h2>基本プロフィール</h2>
             <table id="profile-table" class="table">
                 <tr>
-                    <th>キャスト</th><td>{{ $star->cv }}</td>
+                    <th>キャスト</th><td>{{ $star->cv }}
+                        <a href="https://ja.wikipedia.org/wiki/{{ urlencode($star->cv) }}"
+                           class="link wiki" target="_blank" rel="noopener">Wikipedia</a></td>
                     <th>誕生日</th><td>{{ convertDateString($star->birthday) }}</td>
                 </tr>
                 <tr>
@@ -68,7 +71,7 @@
                 このセクションは管理人が収集した情報によるものです。<br>
                 公式の情報ではない推察や、誤った情報、古い情報が含まれる場合があることにご注意ください。
             </p>
-            <div style="text-align: right">最終更新 : {{ date('r', strtotime($star->updated_at)) }}</div>
+            <div style="text-align: right">最終更新 : {{ date('Y/m/d G:i:s T', strtotime($star->updated_at)) }}</div>
         </section>
     </div>
 @endsection

@@ -23,9 +23,7 @@
     background: transparent;
     background-size: 200px auto;
     background-position: right top;
-    /*object-fit: cover;
-    object-position: top center;
-    border-bottom-left-radius: 3px;*/
+    background-repeat: no-repeat;
     filter: drop-shadow(0 0 3px rgba(0,0,0,0.2));
     z-index: 15;
 }
@@ -59,4 +57,24 @@
 /* 特殊処理 */
 .star-button[data-star="nanadaiba"] > .tachie{
     background-size: 240px auto;
+}
+.star-button[data-star="junnahoshimi"] > .tachie{
+    height: calc(100% + 28px);
+}
+.star-button[data-star="mayatendo"] > .tachie{
+    background-size: 220px auto;
+    width: 200px;
+}
+.star-button[data-star="claudinesaijo"] > .tachie{
+    background-size: 170px auto;
+    background-position: right 10px top;
+}
+.star-button[data-star="futabaisurugi"] > .tachie{
+    width: 195px;
+    height: calc(100% + 15px);
+}
+.star-button[data-star="kaorukohanayagi"] > .tachie{
+    height: calc(100% + 25px);
+    background-size: 210px auto;
+    background-position: right -25px top;
 }

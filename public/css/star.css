@@ -34,7 +34,7 @@ img#tachie{
     font-size: 300px;
     font-family: 'Noto Serif', serif;
     color: rgba(0,0,0,0.2);
-    line-height: 0.9em;
+    line-height: 1em;
     z-index: 1;
     user-select: none;
 }

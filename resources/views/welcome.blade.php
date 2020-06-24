@@ -77,13 +77,12 @@
 
             <div class="links">
                 <a href="{{ url('/star') }}">舞台少女一覧</a>
-                <a href="{{ url('/') }}">学校一覧</a>
-                <a href="{{ url('/') }}">統合検索</a>
+                <a href="{{ url('/school') }}">学校一覧</a>
                 <a href="{{ url('/') }}">GitHub</a>
             </div>
 
             <footer>
-                {{ $_SERVER['HTTP_HOST'] }}
+                {{ config('app.name').' Ver'.config('starrysky.version') }}
                 <p id="phrase">And it shall be bestowed upon you, the Star which you have longed for─</p>
             </footer>
         </main>

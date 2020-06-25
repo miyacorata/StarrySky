@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\School;
 use App\Star;
 use cebe\markdown\GithubMarkdown;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -20,9 +21,17 @@ class StarController extends Controller
         }catch (ModelNotFoundException $e){
             abort(404);
         }
+        // Document parse
         $parser = new GithubMarkdown();
         $parser->enableNewlines = true;
         $document = $parser->parse($star->document);
-        return view('star.show',compact('star','document'));
+        // School emblem
+        try{
+            $school = School::where('school_name','like',$star->school)->firstOrFail();
+            $emblem = $school->school_name_slug;
+        }catch (ModelNotFoundException $e){
+            $emblem = null;
+        }
+        return view('star.show',compact('star','document','emblem'));
     }
 }

@@ -33,7 +33,7 @@
     <div id="info-box">
         <section id="profile" class="plain-box">
             <h1 style="border-bottom-color: {{ $color }}">
-                <img src="{{ asset('image/badge/seisho.png') }}" alt="seisho">
+                @if(!empty($emblem))<img src="{{ asset('image/badge/'.$emblem.'.png') }}" alt="{{ $emblem }}">@endif
                 {{ $star->name }}<span>{{ ucwords(separateString($star->name_r,$star->name_r_separate)) }}</span>
             </h1>
             <div id="student-info">

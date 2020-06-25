@@ -27,6 +27,7 @@
     <nav>
         <a href="{{ url('/') }}">トップ</a>
         <a href="{{ url('/star') }}">舞台少女一覧</a>
+        <a href="{{ url('/school') }}">学校一覧</a>
     </nav>
 </header>
 

@@ -10,7 +10,7 @@ class SchoolController extends Controller
 {
     public function index(Request $request){
         $schools = School::all();
-        dd($schools);
+        return view('school.index',compact('schools'));
     }
 
     public function show($slug){
@@ -19,6 +19,6 @@ class SchoolController extends Controller
         }catch (ModelNotFoundException $e){
             abort(404);
         }
-        dd($school);
+        dd($school->toArray());
     }
 }

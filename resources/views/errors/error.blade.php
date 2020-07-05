@@ -34,13 +34,17 @@
             text-align: center;
             font-family: 'Noto Serif', 'Noto Serif JP', serif;
         }
+        h1 > span{
+            color: gray;
+            margin-right: 10px;
+        }
     </style>
 @endsection
 
 @section('content')
     <div id="error">
         <img src="{{ asset('image/badge/403.png') }}" alt="403">
-        <h1>{{ $status[$sc] ?: 'Something Wrong' }}</h1>
+        <h1><span>{{ $sc }}</span>{{ $status[$sc] ?: 'Something Wrong' }}</h1>
         <p>{{ $message }}</p>
     </div>
 @endsection

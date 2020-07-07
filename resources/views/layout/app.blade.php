@@ -15,6 +15,13 @@
 
     <!-- JS -->
     <script defer src="{{ asset('js/starrysky.js') }}"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.1/dialog-polyfill.min.js" integrity="sha512-j25ufuqB/lU5pbteerL2q48bp4jtD27Oh/yeuf4HrOmqH9zAMCehjUQvvFFOHlMF7igFtAWhgd7zYxjOw2fToQ==" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const dialog = document.getElementById('dialog');
+            dialogPolyfill.registerDialog(dialog);
+        });
+    </script>
 
     <!-- Include -->
     @yield('head')
@@ -52,5 +59,18 @@
         And it shall be bestowed upon you, the Star which you have longed for─
     </blockquote>
 </footer>
+
+<dialog id="dialog">
+    <div class="msgbox">
+        <div class="msgbox-top" id="msgbox-title"></div>
+        <div class="msgbox-body" id="msgbox-body">
+            <p id="msgbox-text"></p>
+        </div>
+        <div class="msgbox-foot" id="msgbox-foot">
+            <a href="javascript:dialog.close()" class="button">OK</a>
+        </div>
+    </div>
+</dialog>
+
 </body>
 </html>

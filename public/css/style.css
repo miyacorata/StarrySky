@@ -184,3 +184,81 @@ hr{
 .buttons.jw > .button{
     width: 230px;
 }
+
+.msgbox{
+    background: white;
+    border-radius: 6px;
+    min-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.msgbox > .msgbox-top{
+    position: relative;
+    background-color: #ff7779;
+    background-image:
+        linear-gradient(140deg,  #f6565f, #f6565f 40%, transparent 40%, transparent),
+        linear-gradient(120deg,  #fe6665, #fe6665 75%, transparent 75%, transparent),
+        linear-gradient(-140deg, #f6565f, #f6565f 40%, transparent 40%, transparent),
+        linear-gradient(-120deg, #fe6665, #fe6665 75%, transparent 75%, transparent);
+    background-size: 120px auto;
+    background-position: top left, top left, top right, top right;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 3px 0 7px;
+    font-size: 18px;
+    font-family: 'Noto Serif', 'Noto Serif JP', serif;
+    text-decoration: underline dotted white;
+    box-shadow: inset 0 -5px white, inset 0 0 0 1.5px #ff7779, inset 0 0 0 3px white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+}
+.msgbox > .msgbox-top:before{
+    content: '\2726\2726';
+    font-size: 25px;
+    color: #ff7779;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    transform: rotate(-30deg);
+}
+.msgbox > .msgbox-top:after{
+    content: '\2726\2726';
+    font-size: 25px;
+    color: #ff7779;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    transform: rotate(30deg);
+}
+.msgbox > .msgbox-body{
+    padding: 0 20px;
+}
+.msgbox > .msgbox-foot{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+}
+.msgbox > .msgbox-foot > .button{
+    width: 100px;
+}
+#msgbox-text{
+    white-space: pre-line;
+}
+
+dialog{
+    position: fixed;
+    top: 50vh;
+    transform: translate(0, -50%);
+    border: none;
+    margin: auto;
+    background: transparent;
+}
+dialog::backdrop, dialog + .backdrop{
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: rgba(0,0,0,0.4);
+}

@@ -70,6 +70,12 @@ footer #footer-links > a{
     color: whitesmoke;
 }
 
+#search-box{
+    display: flex;
+    justify-content: space-between;
+    margin: -10px 0 10px;
+}
+
 /* 特殊処理 */
 img#tachie[data-star="nanadaiba"]{
     left: calc(50vw - 730px);

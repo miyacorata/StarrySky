@@ -14,3 +14,9 @@ const setClipBoard = (text) => {
         alert('クリップボードにコピーできませんでした\n開発者ツールから詳細を確認できます');
     });
 }
+
+const showMessage = (title, text) => {
+    document.getElementById('msgbox-title').innerText = title;
+    document.getElementById('msgbox-text').innerText = text;
+    document.getElementById('dialog').showModal();
+}

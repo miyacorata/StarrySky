@@ -13,6 +13,8 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('/stars', StarController::class);
-    $router->resource('schools', SchoolController::class);
+    $router->resource('/schools', SchoolController::class);
+    $router->resource('/pages', PageController::class);
+
 
 });

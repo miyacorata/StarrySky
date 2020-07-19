@@ -71,12 +71,18 @@ class PageController extends AdminController
     {
         $form = new Form(new Page());
 
-        $form->text('title', __('Title'));
-        $form->image('picture', __('Picture'));
-        $form->text('category', __('Category'));
-        $form->switch('cw', __('Cw'));
-        $form->color('color', __('Color'));
-        $form->textarea('document', __('Document'));
+        $form->text('title', __('Title'))
+            ->help('スペースが必要な場合、アンダーバーで置き換えてください');
+        $form->text('picture', __('Picture'))
+            ->help('画像が格納されているURLを指定してください');
+        $form->text('category', __('Category'))
+            ->help('カンマ区切りで複数入力が可能です');
+        $form->switch('cw', __('Cw'))
+            ->help('重大なネタバレであればONにします');
+        $form->text('color', __('Color'))
+            ->help('キャラクターに関する記事など背景色を変える場合に入力します "#"を含める必要があります');
+        $form->textarea('document', __('Document'))
+            ->help('Markdownで入力してください');
 
         return $form;
     }

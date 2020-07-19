@@ -94,7 +94,9 @@
                 このセクションは管理人が収集した情報によるものです。<br>
                 公式の情報ではない推察や、誤った情報、古い情報が含まれる場合があることにご注意ください。
             </p>
-            <div style="text-align: right">最終更新 : {{ date('Y/m/d G:i:s T', strtotime($star->updated_at)) }}</div>
+            <div style="text-align: right">
+                <a href="{{ url('/admin/stars/'.$star->id.'/edit') }}" class="button small">編集</a>
+                最終更新 : {{ date('Y/m/d G:i:s T', strtotime($star->updated_at)) }}</div>
         </section>
     </div>
 @endsection

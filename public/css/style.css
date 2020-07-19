@@ -184,6 +184,12 @@ hr{
 .buttons.jw > .button{
     width: 230px;
 }
+.button.small{
+    display: inline;
+    padding: 0 5px;
+    font-size: smaller;
+    margin: 0 3px;
+}
 
 .msgbox{
     background: white;

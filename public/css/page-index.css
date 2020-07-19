@@ -1,0 +1,59 @@
+img#top-image{
+    position: fixed;
+    top: 40px;
+    left: calc(50vw - 630px);
+    z-index: 2;
+}
+
+#page-header > #welcome{
+    font-family: 'Noto Serif', 'Noto Serif JP', serif;
+    font-size: 28px;
+}
+
+form#page-search{
+    text-align: center;
+    padding: 10px;
+}
+input[type="submit"]{
+    font-size: 15px;
+}
+input[name="q"]{
+    width: 300px;
+}
+
+.recent-page > h3 > span{
+    display: inline-block;
+    text-align: center;
+    width: 115px;
+    font-size: small;
+    background: lightgray;
+    border-radius: 2px;
+    margin-right: 3px;
+}
+.recent-page > h3 > span:after{
+    content: '更新';
+    margin-left: 2px;
+}
+.recent-page > h3 > a{
+    text-decoration: none;
+}
+.recent-page > .category:before{
+    content: 'カテゴリ';
+    font-size: smaller;
+    padding: 0 4px;
+    margin-right: 10px;
+    background: gray;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: inset 0 0 4px dimgray;
+    position: relative;
+}
+.recent-page > blockquote.description{
+    border: solid 2px lightgray;
+    background: whitesmoke;
+    border-radius: 5px;
+    margin: 0.5em;
+    font-size: smaller;
+    padding: 2px 5px;
+}

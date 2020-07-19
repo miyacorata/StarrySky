@@ -33,8 +33,9 @@
     <h1><a href="{{ url('/') }}">{{ config('app.name') }}</a></h1>
     <nav>
         <a href="{{ url('/') }}">トップ</a>
-        <a href="{{ url('/star') }}">舞台少女一覧</a>
-        <a href="{{ url('/school') }}">学校一覧</a>
+        <a href="{{ url('/star') }}">舞台少女</a>
+        <a href="{{ url('/school') }}">学校</a>
+        <a href="{{ url('/page') }}">書庫</a>
     </nav>
 </header>
 

@@ -8,12 +8,6 @@ img#tachie{
     z-index: 2;
 }
 
-#info-box{
-    position: relative;
-    margin: 30px 0 0 470px;
-    z-index: 10;
-}
-
 #profile > h1 > span{
     margin-left: 20px;
     font-size: 20px;

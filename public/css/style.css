@@ -268,3 +268,10 @@ dialog::backdrop, dialog + .backdrop{
     min-width: 100vw;
     background: rgba(0,0,0,0.4);
 }
+
+/* Layout */
+#info-box{
+    position: relative;
+    margin: 30px 0 0 470px;
+    z-index: 10;
+}

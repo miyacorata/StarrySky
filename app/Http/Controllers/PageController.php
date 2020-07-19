@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Page;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -11,9 +12,15 @@ class PageController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('page.index');
+        // TODO: 検索の実装・切り分け
+
+        // 記事件数
+        $count = Page::all()->count();
+        // 最近の更新
+        $recent = Page::orderBy('updated_at','desc')->limit(5)->get();
+        return view('page.index',compact('count','recent'));
     }
 
     /**
@@ -45,7 +52,8 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        // TODO: 実装する
+        abort(500);
     }
 
     /**

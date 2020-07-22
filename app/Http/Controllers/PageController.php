@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Page;
+use cebe\markdown\GithubMarkdown;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -48,12 +50,17 @@ class PageController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function show($id)
+    public function show($title_path)
     {
-        // TODO: 実装する
-        abort(500);
+        $title = str_replace('_',' ',$title_path);
+        try {
+            $page = Page::where('title','like',$title)->firstOrFail();
+        }catch (ModelNotFoundException $e){
+            abort(404,'"'.$title.'"というページは存在しません');
+        }
+        return view('page.show',compact('page'));
     }
 
     /**

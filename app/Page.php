@@ -2,6 +2,7 @@
 
 namespace App;
 
+use cebe\markdown\GithubMarkdown;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -33,4 +34,13 @@ use Illuminate\Database\Eloquent\Model;
 class Page extends Model
 {
     protected $table = 'pages';
+
+    /**
+     * @return string
+     */
+    public function getDocumentAsHtml(){
+        $parser = new GithubMarkdown();
+        $parser->enableNewlines = true;
+        return $parser->parse($this->document);
+    }
 }

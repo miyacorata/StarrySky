@@ -2,6 +2,7 @@
 
 namespace App;
 
+use cebe\markdown\GithubMarkdown;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -63,4 +64,13 @@ use Illuminate\Database\Eloquent\Model;
 class Star extends Model
 {
     protected $table = "stars";
+
+    /**
+     * @return string
+     */
+    public function getDocumentAsHtml(){
+        $parser = new GithubMarkdown();
+        $parser->enableNewlines = true;
+        return $parser->parse($this->document);
+    }
 }

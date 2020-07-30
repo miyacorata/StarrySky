@@ -88,7 +88,7 @@
             </div>
         </section>
         <section id="" class="plain-box">
-            <div>{!! $document ?: '<p style="color:darkred">ドキュメントが登録されていません</p>' !!}</div>
+            <div>{!! $star->getDocumentAsHtml() ?: '<p style="color:darkred">ドキュメントが登録されていません</p>' !!}</div>
             <hr>
             <p style="font-size: 13px">
                 このセクションは管理人が収集した情報によるものです。<br>

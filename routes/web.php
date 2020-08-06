@@ -17,5 +17,6 @@ Route::get('/', 'InfoController@home');
 
 Route::resource('/star', 'StarController');
 Route::resource('/school', 'SchoolController');
+Route::resource('/page', 'PageController', ['only' => ['index', 'show']]);
 
 Route::get('/ed/403', 'InfoController@ed403');

@@ -41,7 +41,9 @@
                         <span>{{ date('m/d H:i',strtotime($page->updated_at)) }}</span>
                         <a href="{{ url('/page/'.urlencode($page->title)) }}">{{ $page->title }}</a>
                     </h3>
-                    <div class="category">{{ $page->category }}</div>
+                    <div class="category">
+                        {!! e($page->category) ?: '<span style="font-style: italic;font-size: small;color: darkred">このページはどのカテゴリにも属していません</span>' !!}
+                    </div>
                     <blockquote class="description">{{ mb_substr($page->document,0,60).'...' }}</blockquote>
                 </div>
             @empty

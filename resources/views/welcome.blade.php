@@ -79,8 +79,8 @@
             </div>
 
             <div class="links">
-                <a href="{{ url('/star') }}">舞台少女一覧</a>
-                <a href="{{ url('/school') }}">学校一覧</a>
+                <a href="{{ url('/star') }}">舞台少女</a>
+                <a href="{{ url('/school') }}">学校</a>
                 <a href="{{ url('/page') }}">書庫</a>
                 <a href="{{ config('starrysky.repositoryUrl') }}" target="_blank" rel="noopener">GitHub</a>
             </div>

@@ -11,8 +11,11 @@
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #151515;
+            html {
+                background: linear-gradient(-160deg, #031955, #135482 40%, #98eeda);
+            }
+            body {
+                /*background-color: #151515;*/
                 color: #fffaf0;
                 font-family: 'Noto Serif', 'Noto Serif JP', sans-serif;
                 min-height: 100vh;
@@ -53,7 +56,7 @@
                 font-size: 14px;
             }
             footer > #phrase {
-                color: #636b6f;
+                color: rgba(255,250,240,0.5);
                 font-style: italic;
             }
         </style>

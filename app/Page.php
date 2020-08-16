@@ -30,6 +30,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Page whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string|null $picture
+ * @method static \Illuminate\Database\Eloquent\Builder|Page wherePicture($value)
  */
 class Page extends Model
 {

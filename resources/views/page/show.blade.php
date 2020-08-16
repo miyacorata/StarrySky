@@ -18,7 +18,7 @@
                 <span style="font-style: italic;font-size: small;color: darkred">このページはどのカテゴリにも属していません</span>
             @else
                 @foreach(explode(',',$page->category) as $category)
-                    <a href="javascript:void(0)">{{ $category }}</a>
+                    <a href="{{ url('/page').'?category='.$category }}">{{ $category }}</a>
                 @endforeach
             @endempty
 

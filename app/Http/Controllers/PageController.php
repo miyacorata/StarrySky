@@ -16,7 +16,26 @@ class PageController extends Controller
      */
     public function index(Request $request)
     {
-        // TODO: 検索の実装・切り分け
+        if(!empty($request->get('category'))){
+            $category = $request->get('category');
+            $query = 'カテゴリ：'.$category;
+            $pages = Page::where('category','like',"%{$category}%")->get();
+            return view('page.result',compact('query','pages'));
+        }
+        if(!empty($request->get('q'))){
+            $query_text = mb_convert_kana($request->get('q'), 's');
+            $query = '単語検索：'.$query_text;
+            // 配列変換
+            $query_array = explode(' ', $query_text);
+            // AND検索
+            $pages = Page::select('*');
+            foreach ($query_array as $word){
+                $pages = $pages->orWhere('title','like',"%{$word}%")
+                    ->orWhere('document','like',"%{$word}%");
+            }
+            $pages = $pages->get();
+            return view('page.result',compact('query','pages'));
+        }
 
         // 記事件数
         $count = Page::all()->count();

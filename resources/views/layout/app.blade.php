@@ -32,7 +32,6 @@
 <header>
     <h1><a href="{{ url('/') }}">{{ config('app.name') }}</a></h1>
     <nav>
-        <a href="{{ url('/') }}">トップ</a>
         <a href="{{ url('/star') }}">舞台少女</a>
         <a href="{{ url('/school') }}">学校</a>
         <a href="{{ url('/page') }}">書庫</a>
@@ -51,6 +50,7 @@
             <address>{{ $_SERVER['HTTP_HOST'] }}</address>
         </div>
         <div id="footer-links">
+            <a href="{{ url('/about') }}">About</a>
             <a href="{{ config('starrysky.repositoryUrl') }}" target="_blank" rel="noopener">GitHub</a>
             <a href="{{ config('starrysky.mastodonAccount') }}" target="_blank" rel="noopener">Mastodon @StarrySky</a>
             <a href="https://miyacorata.net" target="_blank" rel="noopener">miyacorata.net</a>

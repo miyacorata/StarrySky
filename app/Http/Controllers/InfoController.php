@@ -10,6 +10,10 @@ class InfoController extends Controller
         return view('welcome');
     }
 
+    public function about(Request $request){
+        return view('info.about');
+    }
+
     public function ed403(){
         abort(403);
     }

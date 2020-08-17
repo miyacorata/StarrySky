@@ -13,10 +13,10 @@
                 <div id="welcome">書庫へようこそ</div>
                 <p>少女☆歌劇レヴュースタァライトに関する様々な事柄を調査・収集し資料として公開しています</p>
                 <p>ページによっては重大なネタバレが含まれる場合がありますので閲覧・検索の際はご注意ください。</p>
-                <h2>検索</h2>
+                <h2>簡易検索</h2>
                 <form id="page-search" action="{{ url('/page') }}">
                     <label>
-                        <input type="text" placeholder="キーワード" name="q" class="input-box">
+                        <input type="text" placeholder="単語検索" name="q" class="input-box">
                     </label>
                     <input type="submit" class="button" value="検索">
                 </form>

@@ -34,7 +34,7 @@ class PageController extends Controller
                     ->orWhere('document','like',"%{$word}%");
             }
             $pages = $pages->get();
-            return view('page.result',compact('query','pages'));
+            return view('page.result',compact('query','pages','query_text'));
         }
 
         // 記事件数

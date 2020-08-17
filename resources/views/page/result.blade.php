@@ -10,11 +10,11 @@
         <section class="plain-box">
             <h1>書庫内簡易検索</h1>
             <div id="page-header">
-                <h2>キーワード検索</h2>
+                <h2>単語検索</h2>
                 <form id="page-search" action="{{ url('/page') }}">
                     <label>
                         <input type="text" placeholder="キーワード" name="q"
-                               class="input-box" @if(!empty($keyword)) value="{{ $keyword }}" @endif>
+                               class="input-box" @if(!empty($query_text)) value="{{ $query_text }}" @endif>
                     </label>
                     <input type="submit" class="button" value="検索">
                 </form>

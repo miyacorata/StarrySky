@@ -27,6 +27,7 @@
 
             main {
                 text-align: center;
+                cursor: default;
             }
 
             #title {
@@ -42,13 +43,19 @@
             }
 
             .links > a {
-                color: aliceblue;
+                color: #f0f8ff;
                 margin: 0 25px;
                 font-size: 17px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 transition: all .5s;
+            }
+            .links.subline > a {
+                font-weight: normal;
+                font-size: 15px;
+                margin: 0 15px;
+                letter-spacing: normal;
             }
 
             footer {
@@ -78,11 +85,16 @@
                 <h1>{{ config('app.name') }}</h1>
             </div>
 
-            <div class="links">
+            <div class="links" style="margin-bottom: 20px">
                 <a href="{{ url('/star') }}">舞台少女</a>
                 <a href="{{ url('/school') }}">学校</a>
                 <a href="{{ url('/page') }}">書庫</a>
+
+            </div>
+            <div class="links subline">
+                <a href="{{ url('/about') }}">About</a>
                 <a href="{{ config('starrysky.repositoryUrl') }}" target="_blank" rel="noopener">GitHub</a>
+                <a href="{{ url('/admin') }}">Admin</a>
             </div>
 
             <footer>

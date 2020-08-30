@@ -18,6 +18,7 @@ php artisan key:generate
 cp .env.example .env && nano .env
 
 # Laravel-admin install
+php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
 php artisan admin:install
 
 # Deploy image files

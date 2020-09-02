@@ -30,7 +30,7 @@
             @forelse($stars as $star)
                 @include('component.star', compact('star'))
             @empty
-                ない
+                <p style="color: darkred;font-style: italic;">該当するレコードがありません</p>
             @endforelse
         </div>
     </section>

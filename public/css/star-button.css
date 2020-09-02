@@ -78,3 +78,21 @@
     background-size: 210px auto;
     background-position: right -25px top;
 }
+.star-button[data-star="tamaotomoe"] > .tachie{
+    background-position: right -10px top;
+}
+.star-button[data-star="fumiyumeooji"] > .tachie{
+    background-position: right -50px top 4px;
+    background-size: 215px auto;
+}
+.star-button[data-star="ichieotonashi"] > .tachie{
+    background-size: 230px auto;
+}
+.star-button[data-star="ruiakikaze"] > .tachie{
+    background-position: right top -20px;
+    background-size: 210px auto;
+    height: calc(100% + 35px);
+}
+.star-button[data-star="yuyukotanaka"] > .tachie{
+    background-position: right 15px top;
+}

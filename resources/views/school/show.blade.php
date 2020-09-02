@@ -29,6 +29,9 @@
         <div class="buttons">
             @forelse($stars as $star)
                 @include('component.star', compact('star'))
+                @if($loop->last && (count($stars) % 3))
+                    <img src="{{ asset('image/badge/'.$school->school_name_slug.'.png') }}" alt="" class="spacer">
+                @endif
             @empty
                 <p style="color: darkred;font-style: italic;">該当するレコードがありません</p>
             @endforelse

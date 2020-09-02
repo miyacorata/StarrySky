@@ -54,6 +54,16 @@
 
 }
 
+/* スペーサ */
+.buttons > img.spacer{
+    width: 410px;
+    height: 120px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    padding: 20px;
+    object-fit: scale-down;
+}
+
 /* 特殊処理 */
 .star-button[data-star="nanadaiba"] > .tachie{
     background-size: 240px auto;

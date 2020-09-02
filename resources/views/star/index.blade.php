@@ -10,6 +10,9 @@
         <div class="buttons star-buttons">
             @forelse($stars as $star)
                 @include('component.star',compact('star'))
+                @if($loop->last && (count($stars) % 3))
+                    <img src="{{ asset('image/badge/mrwhite.png') }}" alt="" class="spacer">
+                @endif
             @empty
                 <p style="margin: 30px 0;text-align: center">
                     データが登録されていません。<br>

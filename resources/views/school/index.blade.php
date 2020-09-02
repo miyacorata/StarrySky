@@ -7,6 +7,7 @@
             border-radius: 4px;
             box-shadow: 0 0 5px gray;
             overflow: hidden;
+            margin-bottom: 10px;
         }
         .school > .name{
             width: 300px;

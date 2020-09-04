@@ -33,7 +33,7 @@
         </h1>
         <p>{!! nl2br($school->description) !!}</p>
         <h2>所属舞台少女</h2>
-        <div class="buttons">
+        <div class="buttons stars">
             @forelse($stars as $star)
                 @include('component.star', compact('star'))
                 @if($loop->last && (count($stars) % 3))

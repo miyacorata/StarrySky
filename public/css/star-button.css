@@ -65,6 +65,10 @@
 }
 
 /* 特殊処理 */
+.buttons.stars{
+    padding-top: 5px;
+}
+
 .star-button[data-star="nanadaiba"] > .tachie{
     background-size: 240px auto;
 }

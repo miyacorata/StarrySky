@@ -107,3 +107,20 @@
     background-size: 175px auto;
     background-position: right 25px top;
 }
+.star-button[data-star="aruruotsuki"] > .tachie{
+    background-size: 230px auto;
+    height: calc(100% + 35px);
+}
+.star-button[data-star="misorakano"] > .tachie{
+    background-position: left -13px top -20px;
+    background-size: 225px auto;
+    height: calc(100% + 35px);
+}
+.star-button[data-star="tsukasaebisu"] > .tachie{
+    background-size: 225px auto;
+}
+.star-button[data-star="shizuhakocho"] > .tachie{
+    height: calc(100% + 35px);
+    background-size: 240px auto;
+    background-position: right -45px top;
+}

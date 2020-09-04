@@ -2,7 +2,7 @@
 
 namespace App;
 
-use cebe\markdown\GithubMarkdown;
+use cebe\markdown\MarkdownExtra;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -69,8 +69,8 @@ class Star extends Model
      * @return string
      */
     public function getDocumentAsHtml(){
-        $parser = new GithubMarkdown();
-        $parser->enableNewlines = true;
+        $parser = new MarkdownExtra();
+        $parser->html5 = true;
         return $parser->parse($this->document);
     }
 }

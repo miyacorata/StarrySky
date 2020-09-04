@@ -72,5 +72,8 @@ footer #footer-links > a{
 
 /* 特殊処理 */
 img#tachie[data-star="nanadaiba"]{
-    left: calc(50vw - 730px);
+    left: calc(50vw - 760px);
+}
+img#tachie[data-star="ichieotonashi"]{
+    left: calc(50vw - 780px);
 }

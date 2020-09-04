@@ -74,6 +74,30 @@ footer #footer-links > a{
 img#tachie[data-star="nanadaiba"]{
     left: calc(50vw - 760px);
 }
+img#tachie[data-star="junnahoshimi"]{
+    top: 10px;
+}
+img#tachie[data-star="kaorukohanayagi"]{
+    top: 15px;
+}
 img#tachie[data-star="ichieotonashi"]{
     left: calc(50vw - 780px);
+}
+img#tachie[data-star="ruiakikaze"]{
+    top: -30px;
+}
+img#tachie[data-star="aruruotsuki"]{
+    left: calc(50vw - 750px);
+    top: 0;
+}
+img#tachie[data-star="misorakano"]{
+    left: calc(50vw - 740px);
+    top: -40px;
+}
+img#tachie[data-star="lalafinnonomiya"]{
+    left: calc(50vw - 730px);
+}
+img#tachie[data-star="shizuhakocho"]{
+    left: calc(50vw - 720px);
+    top: -20px;
 }

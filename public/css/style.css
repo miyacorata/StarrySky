@@ -16,6 +16,8 @@ header{
     font-family: 'Noto Serif', 'Noto Serif JP', serif;
     margin-bottom: 10px;
     text-shadow: 0 0 3px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1000;
 }
 header > h1, header > h1 > a{
     color: floralwhite;

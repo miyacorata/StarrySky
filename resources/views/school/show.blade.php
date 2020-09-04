@@ -15,6 +15,12 @@
             vertical-align: bottom;
             padding-bottom: 5px;
         }
+        #summary > h1 > span{
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #1c2529;
+        }
     </style>
 @endsection
 
@@ -23,6 +29,7 @@
         <h1 style="border-bottom-color: {{ $school->color }}">
             <img src="{{ asset('image/badge/'.$school->school_name_slug.'.png') }}" alt="{{ $school->school_name }}">
             {{ $school->school_name }}
+            <span>{{ $school->school_name_y }}</span>
         </h1>
         <p>{!! nl2br($school->description) !!}</p>
         <h2>所属舞台少女</h2>

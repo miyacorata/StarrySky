@@ -48,13 +48,14 @@ a.link.wiki{
     font-size: 13px;
     margin-left: 5px;
 }
-a.link{
-    color: #0d6aad;
-}
-a.link:before{
+a.link.wiki:before{
     content: '\226b';
     vertical-align: center;
 }
+a.link{
+    color: #0d6aad;
+}
+
 
 /* override */
 footer > blockquote{

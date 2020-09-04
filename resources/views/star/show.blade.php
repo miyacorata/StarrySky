@@ -7,6 +7,10 @@
 
     $color = strlen($star->color) === 7 ? $star->color : '#151515';
     $back_name_array = explode(' ',ucwords(separateString($star->name_r, $star->name_r_separate)), 2);
+
+    /** @var $school App\School|null */
+    $school_slug = $school->school_name_slug ?: null;
+    $school_name = $school->school_name ?: '';
 ?>
 
 @section('head')
@@ -33,11 +37,14 @@
     <div id="info-box">
         <section id="profile" class="plain-box">
             <h1 style="border-bottom-color: {{ $color }}">
-                @if(!empty($emblem))<img src="{{ asset('image/badge/'.$emblem.'.png') }}" alt="{{ $emblem }}">@endif
+                @if(!empty($school_slug))
+                    <img src="{{ asset('image/badge/'.$school_slug.'.png') }}" alt="{{ $school_name }}">
+                @endif
                 {{ $star->name }}<span>{{ ucwords(separateString($star->name_r,$star->name_r_separate)) }}</span>
             </h1>
             <div id="student-info">
-                <div>{{ $star->school.' '.$star->department }}
+                <div>
+                    <a href="{{ url('school/'.$school_slug) }}" class="link">{{ $star->school }}</a> &#x2bc8 {{ $star->department }}
                     {{ $star->grade >= 4 ? $star->grade.'期' : $star->grade.'年' }}
                     {{ !empty($star->class_no) ? '出席番号'.$star->class_no.'番': '' }}</div>
                 <div style="color: {{ $color }}; font-weight: bold;cursor: default" id="color-code"

@@ -20,13 +20,12 @@ class StarController extends Controller
         }catch (ModelNotFoundException $e){
             abort(404);
         }
-        // School emblem
+        // School emblem & slag
         try{
             $school = School::where('school_name','like',$star->school)->firstOrFail();
-            $emblem = $school->school_name_slug;
         }catch (ModelNotFoundException $e){
-            $emblem = null;
+            $school = null;
         }
-        return view('star.show',compact('star','emblem'));
+        return view('star.show',compact('star','school'));
     }
 }

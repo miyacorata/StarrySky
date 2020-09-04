@@ -104,5 +104,6 @@
     height: calc(100% + 35px);
 }
 .star-button[data-star="yuyukotanaka"] > .tachie{
-    background-position: right 15px top;
+    background-size: 175px auto;
+    background-position: right 25px top;
 }

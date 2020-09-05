@@ -20,6 +20,8 @@
         document.addEventListener('DOMContentLoaded',()=>{
             const dialog = document.getElementById('dialog');
             dialogPolyfill.registerDialog(dialog);
+            const link_dialog = document.getElementById('link-dialog');
+            dialogPolyfill.registerDialog(link_dialog);
         });
     </script>
 
@@ -69,6 +71,20 @@
         </div>
         <div class="msgbox-foot" id="msgbox-foot">
             <a href="javascript:dialog.close()" class="button">OK</a>
+        </div>
+    </div>
+</dialog>
+
+<dialog id="link-dialog">
+    <div class="msgbox">
+        <div class="msgbox-top">確認</div>
+        <div class="msgbox-body">
+            <p>以下のサイトを新しいウィンドウで開きます。<br>よろしいですか？</p>
+            <p id="link-dialog-link"></p>
+        </div>
+        <div class="msgbox-foot" id="msgbox-foot">
+            <a href="javascript:void(0)" id="link-dialog-close" class="button">キャンセル</a>
+            <a href="#" target="_blank" rel="noopener" class="button" id="link-dialog-submit">OK</a>
         </div>
     </div>
 </dialog>

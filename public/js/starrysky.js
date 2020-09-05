@@ -20,3 +20,24 @@ const showMessage = (title, text) => {
     document.getElementById('msgbox-text').innerText = text;
     document.getElementById('dialog').showModal();
 }
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+    const linkDialogClose = document.getElementById('link-dialog-close');
+    linkDialogClose.addEventListener('click',()=>{
+            document.getElementById('link-dialog').close();
+    });
+
+    document.querySelectorAll('#document a[href]').forEach((el) => {
+        if(!el.href.startsWith(location.protocol+'//'+location.host)){
+            el.addEventListener('click',(e)=>{
+                e.preventDefault();
+                document.getElementById('link-dialog-link').innerText = el.href;
+                const jumpButton = document.getElementById('link-dialog-submit');
+                jumpButton.setAttribute('href',el.href);
+                jumpButton.addEventListener('click', ()=>{ linkDialogClose.click() });
+                document.getElementById('link-dialog').showModal();
+            });
+        }
+    });
+});

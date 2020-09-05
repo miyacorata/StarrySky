@@ -43,7 +43,7 @@
 @section('content')
     <img src="{{ asset('image/tachie/'.$star->name_r.'.png') }}" alt="{{ $star->name }}"
          id="tachie" data-star="{{ $star->name_r }}">
-    <div id="back-name">{{ $back_name_array[0] }}<br>{{ $back_name_array[1].' '.($back_name_array[2] ?: '') }}</div>
+    <div id="back-name">{{ $back_name_array[0] }}<br>{{ $back_name_array[1].' '.($back_name_array[2] ?? '') }}</div>
     <div id="info-box">
         <section id="profile" class="plain-box">
             <h1 style="border-bottom-color: {{ $color }}">

@@ -95,7 +95,7 @@
 .star-button[data-star="tamaotomoe"] > .tachie{
     background-position: right -10px top;
 }
-.star-button[data-star="fumiyumeooji"] > .tachie{
+.star-button[data-star="fumiyumeoji"] > .tachie{
     background-position: right -50px top 4px;
     background-size: 215px auto;
 }
@@ -141,7 +141,7 @@
     background-position: right -5px top;
     background-size: 185px auto;
 }
-.star-button[data-star="shioriyumeooji"] > .tachie{
+.star-button[data-star="shioriyumeoji"] > .tachie{
     background-position: right 10px top;
     background-size: 210px auto;
 }

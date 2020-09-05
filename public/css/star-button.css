@@ -128,3 +128,25 @@
     background-size: 240px auto;
     background-position: right -45px top;
 }
+.star-button[data-star="akirayukishiro"] > .tachie{
+    background-size: 230px auto;
+    width: 195px;
+}
+.star-button[data-star="michiruotori"] > .tachie{
+    height: calc(100% + 35px);
+    width: 195px;
+    background-size: 197px auto;
+}
+.star-button[data-star="liumeifan"] > .tachie{
+    background-position: right -5px top;
+    background-size: 185px auto;
+}
+.star-button[data-star="shioriyumeooji"] > .tachie{
+    background-position: right 10px top;
+    background-size: 210px auto;
+}
+.star-button[data-star="yachiyotsuruhime"] > .tachie{
+    background-position: right -10px top;
+    background-size: 220px auto;
+    width: 200px;
+}

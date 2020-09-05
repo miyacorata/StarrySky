@@ -102,3 +102,12 @@ img#tachie[data-star="shizuhakocho"]{
     left: calc(50vw - 720px);
     top: -20px;
 }
+img#tachie[data-star="akirayukishiro"]{
+    left: calc(50vw - 730px);
+}
+img#tachie[data-star="michiruotori"]{
+    left: calc(50vw - 730px);
+}
+img#tachie[data-star="shioriyumeooji"]{
+    left: calc(50vw - 750px);
+}

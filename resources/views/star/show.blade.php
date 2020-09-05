@@ -5,8 +5,18 @@
      * @var $star App\Star
      */
 
+    // デフォルトカラー
     $color = strlen($star->color) === 7 ? $star->color : '#151515';
-    $back_name_array = explode(' ',ucwords(separateString($star->name_r, $star->name_r_separate)), 2);
+
+    // name,name_r CK処理
+    if(!empty($star->name_r_separate_secondary)){
+        $name = separateString($star->name, $star->name_separate, '・');
+        $name_r = separateString(separateString($star->name_r, $star->name_r_separate_secondary), $star->name_r_separate);
+    }else{
+        $name = $star->name;
+        $name_r = separateString($star->name_r, $star->name_r_separate);
+    }
+    $back_name_array = explode(' ', ucwords($name_r));
 
     /** @var $school App\School|null */
     $school_slug = $school->school_name_slug ?: null;
@@ -33,14 +43,14 @@
 @section('content')
     <img src="{{ asset('image/tachie/'.$star->name_r.'.png') }}" alt="{{ $star->name }}"
          id="tachie" data-star="{{ $star->name_r }}">
-    <div id="back-name">{{ $back_name_array[0] }}<br>{{ $back_name_array[1] }}</div>
+    <div id="back-name">{{ $back_name_array[0] }}<br>{{ $back_name_array[1].' '.($back_name_array[2] ?: '') }}</div>
     <div id="info-box">
         <section id="profile" class="plain-box">
             <h1 style="border-bottom-color: {{ $color }}">
                 @if(!empty($school_slug))
                     <img src="{{ asset('image/badge/'.$school_slug.'.png') }}" alt="{{ $school_name }}">
                 @endif
-                {{ $star->name }}<span>{{ ucwords(separateString($star->name_r,$star->name_r_separate)) }}</span>
+                {{ $name }}<span>{{ ucwords($name_r) }}</span>
             </h1>
             <div id="student-info">
                 <div>

@@ -104,7 +104,7 @@
                 </div>
             </div>
         </section>
-        <section id="" class="plain-box">
+        <section id="document" class="plain-box">
             <div>{!! $star->getDocumentAsHtml() ?: '<p style="color:darkred">ドキュメントが登録されていません</p>' !!}</div>
             <hr>
             <p style="font-size: 13px">

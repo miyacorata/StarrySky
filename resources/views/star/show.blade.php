@@ -1,4 +1,4 @@
-@extends('layout.app', ['title' => $star->name])
+@extends('layout.app', ['title' => $name])
 
 <?php
     /**

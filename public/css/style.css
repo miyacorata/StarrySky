@@ -222,6 +222,8 @@ hr{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     overflow: hidden;
+    border-bottom: solid .1px white;
+    /* ↑ 本来必要ないがこれがないとGoanna(Pale Moon)で崩れる */
 }
 .msgbox > .msgbox-top:before{
     content: '\2726\2726';

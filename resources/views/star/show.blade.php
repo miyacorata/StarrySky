@@ -86,7 +86,7 @@
                 <div style="width: 33%">
                     <h3>百科事典系</h3>
                     <div class="buttons jw">
-                        <a href="https://dic.pixiv.net/a/{{ urlencode($star->name) }}" target="_blank" rel="noopener" class="button">
+                        <a href="https://dic.pixiv.net/a/{{ urlencode($name) }}" target="_blank" rel="noopener" class="button">
                             ピクシブ百科事典
                         </a>
                     </div>
@@ -94,10 +94,10 @@
                 <div style="width: 66%">
                     <h3>イラスト系</h3>
                     <div class="buttons jw">
-                        <a href="https://www.pixiv.net/tags/{{ urlencode($star->name) }}/illustrations" target="_blank" rel="noopener" class="button">
+                        <a href="https://www.pixiv.net/tags/{{ urlencode($name) }}/illustrations" target="_blank" rel="noopener" class="button">
                             pixiv タグ検索
                         </a>
-                        <a href="https://seiga.nicovideo.jp/tag/{{ urlencode($star->name) }}" target="_blank" rel="noopener" class="button">
+                        <a href="https://seiga.nicovideo.jp/tag/{{ urlencode($name) }}" target="_blank" rel="noopener" class="button">
                             ニコニコ静画 タグ検索
                         </a>
                     </div>

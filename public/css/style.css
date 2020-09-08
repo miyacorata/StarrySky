@@ -214,7 +214,7 @@ hr{
     background-repeat: no-repeat;
     color: white;
     text-align: center;
-    padding: 3px 0 7px;
+    padding: 3px 0 9px;
     font-size: 18px;
     font-family: 'Noto Serif', 'Noto Serif JP', serif;
     text-decoration: underline dotted white;
@@ -222,9 +222,8 @@ hr{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     overflow: hidden;
-    /*border-bottom: solid 1px white;*/
-    /* ↑ 本来必要ないがこれがないとGoanna(Pale Moon)で崩れる */
-    /* ↑ と思ったら今度はBlinkとGeckoでバグるようになった 泣きたい */
+    height: 36px;
+    box-sizing: border-box;
 }
 .msgbox > .msgbox-top:before{
     content: '\2726\2726';

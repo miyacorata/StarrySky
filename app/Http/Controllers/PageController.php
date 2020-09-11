@@ -30,8 +30,10 @@ class PageController extends Controller
             // AND検索
             $pages = Page::select('*');
             foreach ($query_array as $word){
-                $pages = $pages->orWhere('title','like',"%{$word}%")
-                    ->orWhere('document','like',"%{$word}%");
+                $pages = $pages->where(function($pages) use($word){
+                    $pages->where('title','like',"%{$word}%");
+                    $pages->orWhere('document','like',"%{$word}%");
+                });
             }
             $pages = $pages->get();
             return view('page.result',compact('query','pages','query_text'));

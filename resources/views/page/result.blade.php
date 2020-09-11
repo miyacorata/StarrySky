@@ -22,29 +22,39 @@
         </section>
         <section class="plain-box">
             <h2>{{ $query }}</h2>
-            <p>
-                該当する資料が
-                <span style="font-size: larger">{{ $pages->count() }}件</span>
-                見つかりました。
-            </p>
-            @forelse($pages as $page)
-                <?php
-                /**
-                 * @var $page \App\Page
-                 */
-                ?>
-                <div class="recent-page">
-                    <h3>
-                        <span>{{ date('m/d H:i',strtotime($page->updated_at)) }}</span>
-                        <a href="{{ url('/page/'.urlencode($page->title)) }}">{{ $page->title }}</a>
-                    </h3>
-                    <div class="category">
-                        {!! e($page->category) ?: '<span style="font-style: italic;font-size: small;color: darkred">このページはどのカテゴリにも属していません</span>' !!}
+            <?php
+            /**
+             * @var $page \App\Page
+             */
+            ?>
+            @if($pages->count() !== 0)
+                <p>
+                    該当する資料が
+                    <span style="font-size: larger">{{ $pages->count() }}件</span>
+                    見つかりました。
+                </p>
+                @foreach($pages as $page)
+                    <div class="recent-page">
+                        <h3>
+                            <span>{{ date('m/d H:i',strtotime($page->updated_at)) }}</span>
+                            <a href="{{ url('/page/'.urlencode($page->title)) }}">{{ $page->title }}</a>
+                        </h3>
+                        <div class="category">
+                            {!! e($page->category) ?: '<span style="font-style: italic;font-size: small;color: darkred">このページはどのカテゴリにも属していません</span>' !!}
+                        </div>
+                        <blockquote class="description">{{ mb_substr($page->document,0,60).'...' }}</blockquote>
                     </div>
-                    <blockquote class="description">{{ mb_substr($page->document,0,60).'...' }}</blockquote>
-                </div>
-            @empty
-            @endforelse
+                @endforeach
+            @else
+                <p style="color: darkred; font-style: italic;">
+                    該当する資料は見当たりませんでした。
+                </p>
+                <p style="font-size: smaller">
+                    変換ミスや点の有無などを再度ご確認ください。<br>
+                    点をスペースに置き換えたり、キーワードを短くすると資料がヒットするかもしれません。
+                </p>
+            @endif
+
         </section>
     </div>
 

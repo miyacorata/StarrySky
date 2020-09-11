@@ -1,7 +1,6 @@
 @extends('layout.app',['title' => 'ログイン'])
 
 @section('head')
-    <link rel="stylesheet" href="{{ admin_asset("vendor/laravel-admin/AdminLTE/plugins/iCheck/square/blue.css") }}">
     <style>
         #login{
             height: calc(100vh - 200px);
@@ -121,7 +120,7 @@
                 @if(config('admin.auth.remember'))
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember" value="1" {{ (!old('username') || old('remember')) ? 'checked' : '' }}>
+                            <input type="checkbox" name="remember" {{ (old('remember')) ? 'checked' : '' }}>
                             ログイン状態を維持
                         </label>
                     </div>

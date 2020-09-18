@@ -17,6 +17,7 @@
             font-size: 32px;
             font-weight: normal;
             position: relative;
+            margin: 10px 0;
         }
         #login h1:after{
             content: 'Authentication';
@@ -84,6 +85,40 @@
             text-align: center;
             font-style: italic;
         }
+
+        #enquiry{
+            line-height: 2em;
+            font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+            position: relative;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #enquiry:before{
+            position: absolute;
+            top: 0;
+            left: calc(50% - 60px);
+            width: 120px;
+            height: 1px;
+            background: #fffaf0;
+            content: '';
+        }
+        #enquiry > a{
+            display: block;
+            background: #dd0000;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            line-height: 70px;
+            font-size: 50px;
+            text-decoration: none;
+            margin: 20px auto;
+            color: white;
+        }
+        #enquiry > span{
+            font-family: 'Noto Serif', 'Noto Serif JP', serif;
+            font-style: italic;
+            font-size: smaller;
+        }
     </style>
 @endsection
 
@@ -117,7 +152,7 @@
                         <input type="password" placeholder="Password" name="password" required>
                     </label>
                 </div>
-                @if(config('admin.auth.remember'))
+                @if(config('admin.auth.remember') and false)
                     <div class="checkbox icheck">
                         <label>
                             <input type="checkbox" name="remember" {{ (old('remember')) ? 'checked' : '' }}>
@@ -128,6 +163,11 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <button type="submit" class="primary">Login</button>
             </form>
+            <div id="enquiry">
+                <a href="{{ config('starrysky.mastodonAccount') }}" target="_blank" rel="noopener">？</a>
+                お問い合わせはこちら<br>
+                <span>Enquiry</span>
+            </div>
         </section>
     </div>
 

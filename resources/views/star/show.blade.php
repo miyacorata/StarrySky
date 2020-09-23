@@ -25,6 +25,7 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/star.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/document-show.css') }}">
     <style>
         body{
             background: {{ $color }};

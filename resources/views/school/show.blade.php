@@ -7,6 +7,7 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/star-button.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/document-show.css') }}">
     <style>
         #summary > h1 > img{
             height: 1em;

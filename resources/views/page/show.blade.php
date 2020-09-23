@@ -23,7 +23,7 @@
             @endempty
 
         </div>
-        <div id="page-content">{!! $page->getDocumentAsHtml() !!}</div>
+        <div id="document">{!! $page->getDocumentAsHtml() !!}</div>
         <hr>
         <p style="font-size: 13px">
             書庫内の情報は管理人が独自に収集した情報によるものです。<br>

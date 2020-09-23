@@ -12,13 +12,13 @@
     margin-left: 6px;
 }
 
-#page-content blockquote{
+#document blockquote{
     background: #e8e8e8;
     margin: 0.5em 10px;
     padding: 5px 20px;
     border-radius: 4px;
 }
-#page-content blockquote > p{
+#document blockquote > p{
     font-family: 'Noto Serif', 'Noto Serif JP', serif;
     font-size: 1.1em;
     margin: 0.6em 0;

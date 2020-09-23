@@ -7,7 +7,7 @@
 @extends('layout.app',['title' => $page->title])
 
 @section('head')
-    <link rel="stylesheet" href="{{ asset('css/page-show.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/document-show.css') }}">
 @endsection
 
 @section('content')

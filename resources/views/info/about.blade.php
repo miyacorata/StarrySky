@@ -28,6 +28,29 @@
             しばらくの間は記事や内容が少ない状態が続く他、管理人の履修進捗により内容はが変化する可能性が十分ございます。
             予めご理解くださいますようお願いいたします。
         </p>
+
+        <h2>プライバシーに関して</h2>
+        <h3>Google Analytics の利用について</h3>
+        <p>
+            当サイトはGoogle Analyticsを利用しアクセス情報を収集しています。
+            収集されたデータはより良いサービスを提供するための資料として活用することがあります。
+        </p>
+        <p>
+            Google Analyticsはアクセス情報の収集のために3rd Party Cookieを使用しています。
+            このCookieは最大で26ヶ月の間保持されますが、あなたはブラウザの設定や拡張機能を用いて
+            Google AnalyticsのCookieを拒否することができます。
+        </p>
+        <p>
+            GoogleがCookieをどのように扱うかについては
+            <a href="https://policies.google.com/technologies/cookies" target="_blank">Google ポリシーと規約</a>
+            を、Cookieの拒否方法については各ブラウザのヘルプをご確認ください。
+        </p>
+        <ul>
+            <li>Google Chrome - <a href="https://support.google.com/chrome/answer/95647" target="_blank">Chrome で Cookie の削除、有効化、管理を行う</a></li>
+            <li>Microsoft Edge - <a href="https://support.microsoft.com/ja-jp/help/4027947/microsoft-edge-delete-cookies" target="_blank">Microsoft Edge で Cookie を削除する</a></li>
+            <li>Mozilla Firefox - <a href="https://support.mozilla.org/ja/kb/cookies-information-websites-store-on-your-computer#w_cookie-she-ding" target="_blank">Cookie 設定</a></li>
+            <li>Vivaldi - <a href="https://help.vivaldi.com/ja/article/cookies/" target="_blank">Cookie - Vivaldi Browser Help</a></li>
+        </ul>
     </section>
 @endsection
 

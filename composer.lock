@@ -301,16 +301,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.11.0",
+            "version": "2.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "0d4e1a8b29dd987704842f0465aded378f441dca"
+                "reference": "6e6903cd5e3a5be60a79439e3ee8fe126f78fe86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/0d4e1a8b29dd987704842f0465aded378f441dca",
-                "reference": "0d4e1a8b29dd987704842f0465aded378f441dca",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/6e6903cd5e3a5be60a79439e3ee8fe126f78fe86",
+                "reference": "6e6903cd5e3a5be60a79439e3ee8fe126f78fe86",
                 "shasum": ""
             },
             "require": {
@@ -405,7 +405,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-20T23:24:53+00:00"
+            "time": "2020-09-27T04:09:41+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -778,16 +778,16 @@
         },
         {
             "name": "encore/laravel-admin",
-            "version": "v1.8.5",
+            "version": "v1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/z-song/laravel-admin.git",
-                "reference": "d576191446bd76ce61ec142895209fdc1024d853"
+                "reference": "e3060ea62e6f625d0daf92ae5ef721469851c587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/d576191446bd76ce61ec142895209fdc1024d853",
-                "reference": "d576191446bd76ce61ec142895209fdc1024d853",
+                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/e3060ea62e6f625d0daf92ae5ef721469851c587",
+                "reference": "e3060ea62e6f625d0daf92ae5ef721469851c587",
                 "shasum": ""
             },
             "require": {
@@ -844,7 +844,7 @@
                 "grid",
                 "laravel"
             ],
-            "time": "2020-09-25T07:26:20+00:00"
+            "time": "2020-09-27T03:07:05+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -3019,16 +3019,16 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v5.1.5",
+            "version": "v5.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "3ac31ffbc596e41ca081037b7d78fc7a853c0315"
+                "reference": "6d6885e167aad0af4128b392f22d8f2a33dd88ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/3ac31ffbc596e41ca081037b7d78fc7a853c0315",
-                "reference": "3ac31ffbc596e41ca081037b7d78fc7a853c0315",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/6d6885e167aad0af4128b392f22d8f2a33dd88ec",
+                "reference": "6d6885e167aad0af4128b392f22d8f2a33dd88ec",
                 "shasum": ""
             },
             "require": {
@@ -3091,7 +3091,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-12T08:45:47+00:00"
+            "time": "2020-09-02T16:23:27+00:00"
         },
         {
             "name": "symfony/error-handler",

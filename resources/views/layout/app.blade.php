@@ -48,6 +48,10 @@
         <a href="{{ url('/school') }}">学校</a>
         <a href="{{ url('/page') }}">書庫</a>
     </nav>
+    <?php $user = Admin::user(); ?>
+    <div class="AppStatus"
+         title="{{ !empty($user['name']) ? '利用者 : '.$user['name'] : '館外から利用中です' }}">
+        {{ $user ? '本館資料室' : '館外利用' }}</div>
 </header>
 
 {!! !empty($fullwidth) && $fullwidth ? '<div data-pagetype="fullwidth">' : '<main>' !!}

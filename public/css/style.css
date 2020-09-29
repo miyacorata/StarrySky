@@ -36,6 +36,15 @@ header > nav > a{
     margin: 0 5px;
     color: white;
 }
+header > .AppStatus{
+    padding: 1px;
+    width: 180px;
+    margin: 2px 0;
+    text-align: center;
+    border-radius: 3px;
+    background: linear-gradient(rgba(92, 95, 95, 0.8), rgba(92, 95, 95, 0.5));
+    cursor: default;
+}
 
 main, div[data-pagetype=fullwidth]{
     width: 1300px;

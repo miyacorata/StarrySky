@@ -13,10 +13,12 @@ header{
     padding: 3px 10px;
     display: flex;
     align-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
     font-family: 'Noto Serif', 'Noto Serif JP', serif;
     margin-bottom: 10px;
     text-shadow: 0 0 3px rgba(0,0,0,0.3);
-    position: relative;
+    position: fixed;
     z-index: 1000;
 }
 header > h1, header > h1 > a{
@@ -28,6 +30,7 @@ header > h1, header > h1 > a{
 header > nav{
     margin-left: 10px;
     padding: 3px 0 0;
+    width: 100%;
 }
 header > nav > a{
     margin: 0 5px;
@@ -37,6 +40,7 @@ header > nav > a{
 main, div[data-pagetype=fullwidth]{
     width: 1300px;
     margin: 0 auto;
+    padding-top: 45px;
     padding-bottom: 150px;
 }
 

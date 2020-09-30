@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '1.2.0 Amaterasu',
+    'version' => '1.2.1 Amaterasu',
     'repositoryUrl' => 'https://github.com/miyacorata/StarrySky',
     'mastodonAccount' => 'https://mstdn.miyacorata.net/@StarrySky',
 

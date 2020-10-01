@@ -13,7 +13,7 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', {{ config('starrysky.googleAnalytics') }});
+            gtag('config', '{{ config('starrysky.googleAnalytics') }}');
         </script>
 
         <!-- Fonts -->

@@ -301,33 +301,32 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.11.1",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "6e6903cd5e3a5be60a79439e3ee8fe126f78fe86"
+                "reference": "c6d37b4c42aaa3c3ee175f05eca68056f4185646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/6e6903cd5e3a5be60a79439e3ee8fe126f78fe86",
-                "reference": "6e6903cd5e3a5be60a79439e3ee8fe126f78fe86",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c6d37b4c42aaa3c3ee175f05eca68056f4185646",
+                "reference": "c6d37b4c42aaa3c3ee175f05eca68056f4185646",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "^1.0",
                 "doctrine/event-manager": "^1.0",
                 "ext-pdo": "*",
-                "php": "^7.3"
+                "php": "^7.3 || ^8"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^8.1",
                 "jetbrains/phpstorm-stubs": "^2019.1",
-                "nikic/php-parser": "^4.4",
                 "phpstan/phpstan": "^0.12.40",
-                "phpunit/phpunit": "^9.3",
+                "phpunit/phpunit": "^9.4",
                 "psalm/plugin-phpunit": "^0.10.0",
                 "symfony/console": "^2.0.5|^3.0|^4.0|^5.0",
-                "vimeo/psalm": "^3.14.2"
+                "vimeo/psalm": "^3.17.2"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
@@ -405,7 +404,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-27T04:09:41+00:00"
+            "time": "2020-10-22T17:26:24+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -778,16 +777,16 @@
         },
         {
             "name": "encore/laravel-admin",
-            "version": "v1.8.6",
+            "version": "v1.8.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/z-song/laravel-admin.git",
-                "reference": "e3060ea62e6f625d0daf92ae5ef721469851c587"
+                "reference": "7a405d4ba1d6b41b3f4d2aaded60d2c27f758c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/e3060ea62e6f625d0daf92ae5ef721469851c587",
-                "reference": "e3060ea62e6f625d0daf92ae5ef721469851c587",
+                "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/7a405d4ba1d6b41b3f4d2aaded60d2c27f758c2d",
+                "reference": "7a405d4ba1d6b41b3f4d2aaded60d2c27f758c2d",
                 "shasum": ""
             },
             "require": {
@@ -844,7 +843,7 @@
                 "grid",
                 "laravel"
             ],
-            "time": "2020-09-27T03:07:05+00:00"
+            "time": "2020-11-03T08:13:45+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -2969,16 +2968,16 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v5.1.6",
+            "version": "v5.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "6d6885e167aad0af4128b392f22d8f2a33dd88ec"
+                "reference": "0969122fe144dd8ab2e8c98c7e03eedc621b368c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/6d6885e167aad0af4128b392f22d8f2a33dd88ec",
-                "reference": "6d6885e167aad0af4128b392f22d8f2a33dd88ec",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/0969122fe144dd8ab2e8c98c7e03eedc621b368c",
+                "reference": "0969122fe144dd8ab2e8c98c7e03eedc621b368c",
                 "shasum": ""
             },
             "require": {
@@ -2998,11 +2997,6 @@
                 "symfony/css-selector": ""
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\DomCrawler\\": ""
@@ -3041,7 +3035,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-02T16:23:27+00:00"
+            "time": "2020-10-24T12:01:57+00:00"
         },
         {
             "name": "symfony/error-handler",

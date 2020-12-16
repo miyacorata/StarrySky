@@ -111,3 +111,9 @@ img#tachie[data-star="michiruotori"]{
 img#tachie[data-star="shioriyumeoji"]{
     left: calc(50vw - 750px);
 }
+img#tachie[data-star="koharuyanagi"]{
+    left: calc(50vw - 620px);
+}
+img#tachie[data-star="hisamehonami"]{
+    left: calc(50vw - 740px);
+}

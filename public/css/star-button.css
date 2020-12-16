@@ -150,3 +150,13 @@
     background-size: 220px auto;
     width: 200px;
 }
+.star-button[data-star="koharuyanagi"] > .tachie{
+    background-position: right 10px top;
+    background-size: 160px auto;
+}
+.star-button[data-star="suzuminase"] > .tachie{
+    background-size: 200px auto;
+}
+.star-button[data-star="hisamehonami"] > .tachie{
+    background-position: right 20px top;
+}

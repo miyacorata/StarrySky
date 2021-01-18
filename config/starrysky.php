@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'version' => '1.3.0 CheshireCat',
+    'version' => '1.3.1 CheshireCat',
     'repositoryUrl' => 'https://github.com/miyacorata/StarrySky',
     'mastodonAccount' => 'https://mstdn.miyacorata.net/@StarrySky',
 
